@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>erotik.com – Dein persönliches Erlebnis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="onboarding-app" class="onboarding">
+    <!-- Header with progress bar -->
+    <header class="onboarding__header">
+      <button class="onboarding__close" id="btn-close" aria-label="Close">&times;</button>
+      <div class="onboarding__progress">
+        <div class="onboarding__progress-bar" id="progress-bar"></div>
+      </div>
+      <div class="onboarding__lang-toggle">
+        <button class="lang-btn" data-lang="de">DE</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </header>
+
+    <!-- Step 1: Welcome -->
+    <section class="onboarding__step" data-step="1">
+      <h1 data-i18n="welcome.title">Willkommen bei erotik.com</h1>
+      <p class="onboarding__subtitle" data-i18n="welcome.subtitle">Hilf uns, dein Erlebnis zu personalisieren. Es dauert nur eine Minute.</p>
+      <div class="onboarding__actions">
+        <button class="btn btn--primary" data-next data-i18n="welcome.start">Los geht's</button>
+      </div>
+    </section>
+
+    <!-- Step 2: Preferred content language -->
+    <section class="onboarding__step" data-step="2" hidden>
+      <h1 data-i18n="language.title">In welcher Sprache schaust du am liebsten?</h1>
+      <div class="onboarding__options" data-name="contentLanguage" data-type="single">
+        <button class="option-card" data-value="de" data-i18n="language.german">Deutsch</button>
+        <button class="option-card" data-value="en" data-i18n="language.english">Englisch</button>
+        <button class="option-card" data-value="fr" data-i18n="language.french">Französisch</button>
+        <button class="option-card" data-value="es" data-i18n="language.spanish">Spanisch</button>
+        <button class="option-card" data-value="any" data-i18n="language.any">Egal / Alle</button>
+      </div>
+      <div class="onboarding__nav">
+        <button class="btn btn--ghost" data-prev data-i18n="nav.back">Zurück</button>
+      </div>
+    </section>
+
+    <!-- Step 3: Content interests -->
+    <section class="onboarding__step" data-step="3" hidden>
+      <h1 data-i18n="interests.title">Welche Art von Content interessiert dich?</h1>
+      <p class="onboarding__subtitle" data-i18n="interests.subtitle">Wähle alles aus, was dich anspricht.</p>
+      <div class="onboarding__options" data-name="contentInterests" data-type="multi">
+        <button class="option-card" data-value="movies" data-i18n="interests.movies">Filme</button>
+        <button class="option-card" data-value="series" data-i18n="interests.series">Serien</button>
+        <button class="option-card" data-value="clips" data-i18n="interests.clips">Clips & Kurzvideos</button>
+        <button class="option-card" data-value="livecams" data-i18n="interests.livecams">Live-Cams</button>
+        <button class="option-card" data-value="amateur" data-i18n="interests.amateur">Amateur</button>
+        <button class="option-card" data-value="premium" data-i18n="interests.premium">Premium / Studio</button>
+      </div>
+      <div class="onboarding__nav">
+        <button class="btn btn--ghost" data-prev data-i18n="nav.back">Zurück</button>
+        <button class="btn btn--primary" data-next data-i18n="nav.next">Weiter</button>
+      </div>
+    </section>
+
+    <!-- Step 4: Budget / Price range -->
+    <section class="onboarding__step" data-step="4" hidden>
+      <h1 data-i18n="budget.title">Wie viel möchtest du monatlich ausgeben?</h1>
+      <div class="onboarding__options" data-name="budget" data-type="single">
+        <button class="option-card" data-value="free" data-i18n="budget.free">Nur kostenlose Inhalte</button>
+        <button class="option-card" data-value="low" data-i18n="budget.low">Bis 10 € / Monat</button>
+        <button class="option-card" data-value="medium" data-i18n="budget.medium">10–30 € / Monat</button>
+        <button class="option-card" data-value="high" data-i18n="budget.high">30+ € / Monat</button>
+        <button class="option-card" data-value="flexible" data-i18n="budget.flexible">Flexibel / Keine Grenze</button>
+      </div>
+      <div class="onboarding__nav">
+        <button class="btn btn--ghost" data-prev data-i18n="nav.back">Zurück</button>
+      </div>
+    </section>
+
+    <!-- Step 5: Categories Go / No-Go -->
+    <section class="onboarding__step" data-step="5" hidden>
+      <h1 data-i18n="categories.title">Was sind deine Vorlieben?</h1>
+      <p class="onboarding__subtitle" data-i18n="categories.subtitle">Markiere Kategorien als Favorit oder No-Go.</p>
+      <div class="onboarding__categories" data-name="categories">
+        <div class="category-row" data-category="romantic">
+          <span class="category-row__label" data-i18n="categories.romantic">Romantik</span>
+          <div class="category-row__actions">
+            <button class="cat-btn cat-btn--go" data-action="go" aria-label="Go" title="Go-To">&#10084;</button>
+            <button class="cat-btn cat-btn--neutral" data-action="neutral" aria-label="Neutral" title="Neutral">&#8212;</button>
+            <button class="cat-btn cat-btn--nogo" data-action="nogo" aria-label="No-Go" title="No-Go">&#10006;</button>
+          </div>
+        </div>
+        <div class="category-row" data-category="hardcore">
+          <span class="category-row__label" data-i18n="categories.hardcore">Hardcore</span>
+          <div class="category-row__actions">
+            <button class="cat-btn cat-btn--go" data-action="go" aria-label="Go">&#10084;</button>
+            <button class="cat-btn cat-btn--neutral" data-action="neutral" aria-label="Neutral">&#8212;</button>
+            <button class="cat-btn cat-btn--nogo" data-action="nogo" aria-label="No-Go">&#10006;</button>
+          </div>
+        </div>
+        <div class="category-row" data-category="fetish">
+          <span class="category-row__label" data-i18n="categories.fetish">Fetisch</span>
+          <div class="category-row__actions">
+            <button class="cat-btn cat-btn--go" data-action="go" aria-label="Go">&#10084;</button>
+            <button class="cat-btn cat-btn--neutral" data-action="neutral" aria-label="Neutral">&#8212;</button>
+            <button class="cat-btn cat-btn--nogo" data-action="nogo" aria-label="No-Go">&#10006;</button>
+          </div>
+        </div>
+        <div class="category-row" data-category="bdsm">
+          <span class="category-row__label" data-i18n="categories.bdsm">BDSM</span>
+          <div class="category-row__actions">
+            <button class="cat-btn cat-btn--go" data-action="go" aria-label="Go">&#10084;</button>
+            <button class="cat-btn cat-btn--neutral" data-action="neutral" aria-label="Neutral">&#8212;</button>
+            <button class="cat-btn cat-btn--nogo" data-action="nogo" aria-label="No-Go">&#10006;</button>
+          </div>
+        </div>
+        <div class="category-row" data-category="lesbian">
+          <span class="category-row__label" data-i18n="categories.lesbian">Lesbisch</span>
+          <div class="category-row__actions">
+            <button class="cat-btn cat-btn--go" data-action="go" aria-label="Go">&#10084;</button>
+            <button class="cat-btn cat-btn--neutral" data-action="neutral" aria-label="Neutral">&#8212;</button>
+            <button class="cat-btn cat-btn--nogo" data-action="nogo" aria-label="No-Go">&#10006;</button>
+          </div>
+        </div>
+        <div class="category-row" data-category="gay">
+          <span class="category-row__label" data-i18n="categories.gay">Schwul</span>
+          <div class="category-row__actions">
+            <button class="cat-btn cat-btn--go" data-action="go" aria-label="Go">&#10084;</button>
+            <button class="cat-btn cat-btn--neutral" data-action="neutral" aria-label="Neutral">&#8212;</button>
+            <button class="cat-btn cat-btn--nogo" data-action="nogo" aria-label="No-Go">&#10006;</button>
+          </div>
+        </div>
+        <div class="category-row" data-category="milf">
+          <span class="category-row__label" data-i18n="categories.milf">MILF</span>
+          <div class="category-row__actions">
+            <button class="cat-btn cat-btn--go" data-action="go" aria-label="Go">&#10084;</button>
+            <button class="cat-btn cat-btn--neutral" data-action="neutral" aria-label="Neutral">&#8212;</button>
+            <button class="cat-btn cat-btn--nogo" data-action="nogo" aria-label="No-Go">&#10006;</button>
+          </div>
+        </div>
+        <div class="category-row" data-category="anal">
+          <span class="category-row__label" data-i18n="categories.anal">Anal</span>
+          <div class="category-row__actions">
+            <button class="cat-btn cat-btn--go" data-action="go" aria-label="Go">&#10084;</button>
+            <button class="cat-btn cat-btn--neutral" data-action="neutral" aria-label="Neutral">&#8212;</button>
+            <button class="cat-btn cat-btn--nogo" data-action="nogo" aria-label="No-Go">&#10006;</button>
+          </div>
+        </div>
+        <div class="category-row" data-category="threesome">
+          <span class="category-row__label" data-i18n="categories.threesome">Dreier / Gruppensex</span>
+          <div class="category-row__actions">
+            <button class="cat-btn cat-btn--go" data-action="go" aria-label="Go">&#10084;</button>
+            <button class="cat-btn cat-btn--neutral" data-action="neutral" aria-label="Neutral">&#8212;</button>
+            <button class="cat-btn cat-btn--nogo" data-action="nogo" aria-label="No-Go">&#10006;</button>
+          </div>
+        </div>
+        <div class="category-row" data-category="voyeur">
+          <span class="category-row__label" data-i18n="categories.voyeur">Voyeur</span>
+          <div class="category-row__actions">
+            <button class="cat-btn cat-btn--go" data-action="go" aria-label="Go">&#10084;</button>
+            <button class="cat-btn cat-btn--neutral" data-action="neutral" aria-label="Neutral">&#8212;</button>
+            <button class="cat-btn cat-btn--nogo" data-action="nogo" aria-label="No-Go">&#10006;</button>
+          </div>
+        </div>
+      </div>
+      <div class="onboarding__nav">
+        <button class="btn btn--ghost" data-prev data-i18n="nav.back">Zurück</button>
+        <button class="btn btn--primary" data-next data-i18n="nav.next">Weiter</button>
+      </div>
+    </section>
+
+    <!-- Step 6: Summary -->
+    <section class="onboarding__step" data-step="6" hidden>
+      <h1 data-i18n="summary.title">Deine Auswahl im Überblick</h1>
+      <p class="onboarding__subtitle" data-i18n="summary.subtitle">Hier siehst du deine Präferenzen. Du kannst sie jederzeit in deinem Profil ändern.</p>
+      <div class="summary" id="summary-content">
+        <!-- Filled dynamically -->
+      </div>
+      <div class="onboarding__actions">
+        <button class="btn btn--primary" id="btn-finish" data-i18n="summary.finish">Erlebnis starten</button>
+        <button class="btn btn--ghost" data-prev data-i18n="nav.back">Zurück</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
