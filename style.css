@@ -1,25 +1,25 @@
 /* ================================================
    erotik.com – VOD Customer Onboarding
-   Light Theme, Babbel-inspired minimal design
+   Dark theme based on erotik.com brand colors
    ================================================ */
 
 :root {
-  --color-bg: #faf7f2;
-  --color-surface: #ffffff;
-  --color-text: #1a1a1a;
-  --color-text-muted: #6b6b6b;
-  --color-primary: #e84c3d;
-  --color-primary-hover: #d4402f;
-  --color-border: #e5e0da;
-  --color-go: #27ae60;
-  --color-go-bg: #e8f8ef;
+  --color-bg: #1a1a2e;
+  --color-surface: #242440;
+  --color-text: #ffffff;
+  --color-text-muted: #a0a0b8;
+  --color-primary: #c8102e;
+  --color-primary-hover: #e01535;
+  --color-border: #3a3a58;
+  --color-go: #2ecc71;
+  --color-go-bg: rgba(46, 204, 113, 0.15);
   --color-nogo: #e74c3c;
-  --color-nogo-bg: #fdecea;
-  --color-neutral: #95a5a6;
-  --color-neutral-bg: #f0f0f0;
+  --color-nogo-bg: rgba(231, 76, 60, 0.15);
+  --color-neutral: #8e8ea0;
+  --color-neutral-bg: rgba(142, 142, 160, 0.15);
   --radius: 12px;
   --radius-sm: 8px;
-  --shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   --max-width: 520px;
   --transition: 0.2s ease;
 }
@@ -118,9 +118,9 @@ body {
 }
 
 .lang-btn.active {
-  background: var(--color-text);
-  color: var(--color-bg);
-  border-color: var(--color-text);
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
 }
 
 .lang-btn:hover:not(.active) {
@@ -184,12 +184,13 @@ body {
 }
 
 .option-card:hover {
-  border-color: var(--color-text);
+  border-color: var(--color-primary);
+  background: #2e2e4a;
 }
 
 .option-card.selected {
   border-color: var(--color-primary);
-  background: #fef5f4;
+  background: rgba(200, 16, 46, 0.12);
   box-shadow: 0 0 0 1px var(--color-primary);
 }
 
@@ -227,7 +228,7 @@ body {
   height: 36px;
   border-radius: 50%;
   border: 1.5px solid var(--color-border);
-  background: var(--color-surface);
+  background: transparent;
   cursor: pointer;
   font-size: 14px;
   display: flex;
@@ -238,7 +239,7 @@ body {
 }
 
 .cat-btn:hover {
-  border-color: var(--color-text);
+  border-color: var(--color-primary);
 }
 
 .cat-btn--go.active {
@@ -309,7 +310,7 @@ body {
 }
 
 .btn--ghost:hover {
-  color: var(--color-text);
+  color: #fff;
 }
 
 /* ---- Summary ---- */
@@ -384,7 +385,7 @@ body {
   overflow-y: auto;
   border-radius: var(--radius);
   border: 1px solid var(--color-border);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
 }
 
 .onboarding--embed .onboarding__header {
