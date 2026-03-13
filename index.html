@@ -20,17 +20,64 @@
       </div>
     </header>
 
-    <!-- Step 1: Welcome -->
+    <!-- Step 1: Welcome + Trust Badges -->
     <section class="onboarding__step" data-step="1">
       <h1 data-i18n="welcome.title">Willkommen bei erotik.com</h1>
       <p class="onboarding__subtitle" data-i18n="welcome.subtitle">Hilf uns, dein Erlebnis zu personalisieren. Es dauert nur eine Minute.</p>
+      <div class="trust-badges">
+        <div class="trust-badge">
+          <span class="trust-badge__icon">&#128274;</span>
+          <span class="trust-badge__label" data-i18n="trust.badge.secure">SSL-verschlüsselt</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-badge__icon">&#128179;</span>
+          <span class="trust-badge__label" data-i18n="trust.badge.discreet">Diskrete Abrechnung</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-badge__icon">&#9989;</span>
+          <span class="trust-badge__label" data-i18n="trust.badge.trusted">Seit 2002 vertraut</span>
+        </div>
+      </div>
       <div class="onboarding__actions">
         <button class="btn btn--primary" data-next data-i18n="welcome.start">Los geht's</button>
       </div>
     </section>
 
-    <!-- Step 2: Preferred content language -->
+    <!-- Step 2: Trust & How It Works (NEW) -->
     <section class="onboarding__step" data-step="2" hidden>
+      <h1 data-i18n="trust.title">So funktioniert erotik.com</h1>
+      <p class="onboarding__subtitle" data-i18n="trust.subtitle">Sicher, diskret und unkompliziert – seit über 20 Jahren.</p>
+      <div class="info-cards">
+        <div class="info-card">
+          <span class="info-card__icon">&#127909;</span>
+          <div class="info-card__content">
+            <strong data-i18n="trust.howItWorks.title">VOD – Sofort streamen</strong>
+            <p data-i18n="trust.howItWorks.desc">Filme sofort ansehen – auf PC, Tablet, Handy oder Smart-TV. Kein Download nötig.</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <span class="info-card__icon">&#128274;</span>
+          <div class="info-card__content">
+            <strong data-i18n="trust.payment.title">Sichere Zahlung</strong>
+            <p data-i18n="trust.payment.desc">256-Bit-Verschlüsselung. Kreditkarte, PayPal, Sofort und mehr. Auf deinem Kontoauszug steht nur ein neutraler Name.</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <span class="info-card__icon">&#128100;</span>
+          <div class="info-card__content">
+            <strong data-i18n="trust.privacy.title">100 % Diskretion</strong>
+            <p data-i18n="trust.privacy.desc">Keine sichtbare Markennennung auf Rechnungen. Deine Daten werden niemals weitergegeben.</p>
+          </div>
+        </div>
+      </div>
+      <div class="onboarding__nav">
+        <button class="btn btn--ghost" data-prev data-i18n="nav.back">Zurück</button>
+        <button class="btn btn--primary" data-next data-i18n="trust.cta">Verstanden, weiter</button>
+      </div>
+    </section>
+
+    <!-- Step 3: Preferred content language -->
+    <section class="onboarding__step" data-step="3" hidden>
       <h1 data-i18n="language.title">In welcher Sprache schaust du am liebsten?</h1>
       <div class="onboarding__options" data-name="contentLanguage" data-type="single">
         <button class="option-card" data-value="de" data-i18n="language.german">Deutsch</button>
@@ -44,8 +91,8 @@
       </div>
     </section>
 
-    <!-- Step 3: Content interests -->
-    <section class="onboarding__step" data-step="3" hidden>
+    <!-- Step 4: Content interests -->
+    <section class="onboarding__step" data-step="4" hidden>
       <h1 data-i18n="interests.title">Welche Art von Content interessiert dich?</h1>
       <p class="onboarding__subtitle" data-i18n="interests.subtitle">Wähle alles aus, was dich anspricht.</p>
       <div class="onboarding__options" data-name="contentInterests" data-type="multi">
@@ -62,8 +109,8 @@
       </div>
     </section>
 
-    <!-- Step 4: Budget / Price range -->
-    <section class="onboarding__step" data-step="4" hidden>
+    <!-- Step 5: Budget / Price range + Trust Hint -->
+    <section class="onboarding__step" data-step="5" hidden>
       <h1 data-i18n="budget.title">Wie viel möchtest du monatlich ausgeben?</h1>
       <div class="onboarding__options" data-name="budget" data-type="single">
         <button class="option-card" data-value="free" data-i18n="budget.free">Nur kostenlose Inhalte</button>
@@ -72,13 +119,14 @@
         <button class="option-card" data-value="high" data-i18n="budget.high">30+ € / Monat</button>
         <button class="option-card" data-value="flexible" data-i18n="budget.flexible">Flexibel / Keine Grenze</button>
       </div>
+      <p class="trust-hint" data-i18n="budget.trustHint">&#128274; Diskrete Abrechnung – auf deinem Kontoauszug erscheint kein Hinweis auf erotische Inhalte.</p>
       <div class="onboarding__nav">
         <button class="btn btn--ghost" data-prev data-i18n="nav.back">Zurück</button>
       </div>
     </section>
 
-    <!-- Step 5: Categories Go / No-Go -->
-    <section class="onboarding__step" data-step="5" hidden>
+    <!-- Step 6: Categories Go / No-Go -->
+    <section class="onboarding__step" data-step="6" hidden>
       <h1 data-i18n="categories.title">Was sind deine Vorlieben?</h1>
       <p class="onboarding__subtitle" data-i18n="categories.subtitle">Markiere Kategorien als Favorit oder No-Go.</p>
       <div class="onboarding__categories" data-name="categories">
@@ -169,12 +217,58 @@
       </div>
     </section>
 
-    <!-- Step 6: Summary -->
-    <section class="onboarding__step" data-step="6" hidden>
+    <!-- Step 7: FAQ & Support (NEW) -->
+    <section class="onboarding__step" data-step="7" hidden>
+      <h1 data-i18n="faq.title">Häufige Fragen</h1>
+      <p class="onboarding__subtitle" data-i18n="faq.subtitle">Noch unsicher? Hier findest du Antworten.</p>
+      <div class="faq-list" id="faq-list">
+        <details class="faq-item">
+          <summary class="faq-item__question" data-i18n="faq.q1.question">Wie kann ich VOD-Filme auf meinen Fernseher übertragen?</summary>
+          <p class="faq-item__answer" data-i18n="faq.q1.answer">Du kannst über Chromecast, Apple AirPlay, HDMI-Kabel oder direkt über den Browser deines Smart-TVs streamen. Unsere Filme laufen auf allen gängigen Geräten.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__question" data-i18n="faq.q2.question">Was steht auf meinem Kontoauszug?</summary>
+          <p class="faq-item__answer" data-i18n="faq.q2.answer">Nur ein neutraler Firmenname – kein Hinweis auf erotische Inhalte. Deine Privatsphäre ist uns wichtig.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__question" data-i18n="faq.q3.question">Kann ich kostenlos testen?</summary>
+          <p class="faq-item__answer" data-i18n="faq.q3.answer">Ja! Wir bieten kostenlose Trailer und ausgewählte Gratisfilme. Außerdem kannst du jederzeit kündigen – keine Mindestlaufzeit.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__question" data-i18n="faq.q4.question">Ist die Zahlung sicher?</summary>
+          <p class="faq-item__answer" data-i18n="faq.q4.answer">Ja, wir nutzen 256-Bit-SSL-Verschlüsselung und arbeiten mit zertifizierten Zahlungsanbietern. Deine Daten sind jederzeit geschützt.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__question" data-i18n="faq.q5.question">Auf welchen Geräten kann ich schauen?</summary>
+          <p class="faq-item__answer" data-i18n="faq.q5.answer">Auf allen – PC, Mac, Smartphone, Tablet und Smart-TV. Du brauchst nur einen Browser und eine Internetverbindung.</p>
+        </details>
+      </div>
+      <div class="support-box">
+        <div class="support-box__content">
+          <strong data-i18n="support.title">Noch Fragen? Unsicher?</strong>
+          <p data-i18n="support.subtitle">Unser Kundenservice hilft dir gerne – schnell und diskret.</p>
+        </div>
+        <div class="support-box__actions">
+          <a class="btn--outline" href="mailto:support@erotik.com" data-i18n="support.email">E-Mail schreiben</a>
+          <a class="btn--outline" href="#" data-action="open-chat" data-i18n="support.chat">Live-Chat starten</a>
+        </div>
+      </div>
+      <div class="onboarding__nav">
+        <button class="btn btn--ghost" data-prev data-i18n="nav.back">Zurück</button>
+        <button class="btn btn--primary" data-next data-i18n="nav.next">Weiter</button>
+      </div>
+    </section>
+
+    <!-- Step 8: Summary + Trust Footer -->
+    <section class="onboarding__step" data-step="8" hidden>
       <h1 data-i18n="summary.title">Deine Auswahl im Überblick</h1>
       <p class="onboarding__subtitle" data-i18n="summary.subtitle">Hier siehst du deine Präferenzen. Du kannst sie jederzeit in deinem Profil ändern.</p>
       <div class="summary" id="summary-content">
         <!-- Filled dynamically -->
+      </div>
+      <div class="trust-footer">
+        <span data-i18n="summary.trustFooter">&#128274; Sichere Zahlung · Diskrete Abrechnung · Jederzeit kündbar</span>
+        <a class="trust-footer__support" href="#" data-action="open-chat" data-i18n="summary.supportLink">Kundenservice kontaktieren</a>
       </div>
       <div class="onboarding__actions">
         <button class="btn btn--primary" id="btn-finish" data-i18n="summary.finish">Erlebnis starten</button>

@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  const TOTAL_STEPS = 6;
+  const TOTAL_STEPS = 8;
   let currentStep = 1;
   let currentLang = "de";
 
@@ -31,6 +31,8 @@
     bindOptionCards();
     bindCategoryButtons();
     bindFinish();
+    bindFaqAccordion();
+    bindSupportLinks();
     setLang("de");
   }
 
@@ -281,6 +283,32 @@
       alert(currentLang === "de"
         ? "Vielen Dank! Dein personalisiertes Erlebnis wird vorbereitet."
         : "Thank you! Your personalised experience is being prepared.");
+    });
+  }
+
+  // ---- FAQ accordion (only one open at a time) ----
+  function bindFaqAccordion() {
+    var faqList = document.getElementById("faq-list");
+    if (!faqList) return;
+
+    faqList.addEventListener("click", function (e) {
+      var clickedDetails = e.target.closest("details");
+      if (!clickedDetails) return;
+
+      faqList.querySelectorAll("details[open]").forEach(function (d) {
+        if (d !== clickedDetails) d.removeAttribute("open");
+      });
+    });
+  }
+
+  // ---- Support links (dispatch custom event for chat) ----
+  function bindSupportLinks() {
+    app.addEventListener("click", function (e) {
+      var chatLink = e.target.closest('[data-action="open-chat"]');
+      if (chatLink) {
+        e.preventDefault();
+        document.dispatchEvent(new CustomEvent("onboarding:openChat"));
+      }
     });
   }
 
