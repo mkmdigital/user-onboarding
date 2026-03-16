@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  const TOTAL_STEPS = 8;
+  const TOTAL_STEPS = 9;
   let currentStep = 1;
   let currentLang = "de";
 
@@ -13,6 +13,7 @@
   const state = {
     contentLanguage: null,
     contentInterests: [],
+    priorities: [],
     budget: null,
     categories: {},
   };
@@ -233,6 +234,24 @@
       '<div class="summary__section-value">' + (interestLabels.length > 0 ? interestLabels.join(", ") : none) + "</div>" +
       "</div>";
 
+    // Priorities
+    var priorityMap = {
+      quality: t("priorities.quality"),
+      price: t("priorities.price"),
+      variety: t("priorities.variety"),
+      stars: t("priorities.stars"),
+      new_releases: t("priorities.newReleases"),
+      subtitles: t("priorities.subtitles"),
+    };
+    var priorityLabels = (state.priorities || []).map(function (v) {
+      return priorityMap[v] || v;
+    });
+    html +=
+      '<div class="summary__section">' +
+      '<div class="summary__section-title">' + t("summary.priorities") + "</div>" +
+      '<div class="summary__section-value">' + (priorityLabels.length > 0 ? priorityLabels.join(", ") : none) + "</div>" +
+      "</div>";
+
     // Budget
     html +=
       '<div class="summary__section">' +
@@ -271,6 +290,7 @@
       var payload = {
         contentLanguage: state.contentLanguage,
         contentInterests: state.contentInterests,
+        priorities: state.priorities,
         budget: state.budget,
         categories: state.categories,
       };

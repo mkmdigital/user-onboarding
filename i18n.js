@@ -42,7 +42,17 @@ const translations = {
     "interests.amateur": "Amateur",
     "interests.premium": "Premium / Studio",
 
-    // Step 4 – Budget
+    // Step 5 – Priorities
+    "priorities.title": "Was ist dir bei der Filmauswahl wichtig?",
+    "priorities.subtitle": "Wähle alles aus, was für dich zählt.",
+    "priorities.quality": "Hohe Bildqualität (4K / HD)",
+    "priorities.price": "Günstiger Preis",
+    "priorities.variety": "Große Auswahl",
+    "priorities.stars": "Bekannte Darsteller / Studios",
+    "priorities.newReleases": "Neue Releases / Aktualität",
+    "priorities.subtitles": "Untertitel / Mehrsprachigkeit",
+
+    // Step 6 – Budget
     "budget.title": "Wie viel möchtest du monatlich ausgeben?",
     "budget.free": "Nur kostenlose Inhalte",
     "budget.low": "Bis 10 € / Monat",
@@ -71,6 +81,7 @@ const translations = {
     "summary.finish": "Erlebnis starten",
     "summary.contentLanguage": "Content-Sprache",
     "summary.contentInterests": "Content-Interessen",
+    "summary.priorities": "Prioritäten",
     "summary.budget": "Budget",
     "summary.categoriesGoTo": "Go-To Kategorien",
     "summary.categoriesNoGo": "No-Go Kategorien",
@@ -141,7 +152,17 @@ const translations = {
     "interests.amateur": "Amateur",
     "interests.premium": "Premium / Studio",
 
-    // Step 4 – Budget
+    // Step 5 – Priorities
+    "priorities.title": "What matters to you when choosing films?",
+    "priorities.subtitle": "Select everything that counts for you.",
+    "priorities.quality": "High image quality (4K / HD)",
+    "priorities.price": "Low price",
+    "priorities.variety": "Large selection",
+    "priorities.stars": "Well-known actors / studios",
+    "priorities.newReleases": "New releases / latest content",
+    "priorities.subtitles": "Subtitles / multilingual",
+
+    // Step 6 – Budget
     "budget.title": "How much would you like to spend per month?",
     "budget.free": "Free content only",
     "budget.low": "Up to €10 / month",
@@ -170,6 +191,7 @@ const translations = {
     "summary.finish": "Start your experience",
     "summary.contentLanguage": "Content Language",
     "summary.contentInterests": "Content Interests",
+    "summary.priorities": "Priorities",
     "summary.budget": "Budget",
     "summary.categoriesGoTo": "Go-To Categories",
     "summary.categoriesNoGo": "No-Go Categories",
